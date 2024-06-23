@@ -9,7 +9,7 @@ buildscript {
     }
     dependencies {
         classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-        classpath 'org.spongepowered:mixingradle:0.7-SNAPSHOT'
+        classpath 'org.spongepowered:mixingradle:0.7.+'
     }
 }
 
@@ -18,7 +18,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '1.0.0'
+version = '1.0.1'
 group = 'io.github.meatwo310.noitemcombine' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'noitemcombine'
 
@@ -187,7 +187,8 @@ jar {
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,
                 "Implementation-Vendor"   : "noitemcombinesareus",
-                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ")
+                "Implementation-Timestamp": new Date().format("yyyy-MM-dd'T'HH:mm:ssZ"),
+                "MixinConnector": "io.github.meatwo310.noitemcombine.mixin.MixinConnector"
         ])
     }
 
